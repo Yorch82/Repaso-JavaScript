@@ -353,8 +353,45 @@ function getCiudadesOrdenada (ciudades) {
     }
 }
 
-console.log ( getCiudadesOrdenada("Valencia, Alicante"))
+console.log ( getCiudadesOrdenada("Valencia, Alicante"));
 
 // Un palíndromo es una palabra que se escribe igual del derecho que del revés por ejemplo orejero, rallar o somos.  Crea la función esPalindromo que recibirá una cadena de texto y deberá devolver si es un palíndromo o no.
 // Si la función no recibe una cadena de texto o está vacía 'no es un formato correcto'
+
+function esPalindromo (palabra) {
+  if ( typeof palabra != 'string') {
+    console.log ('no es un formato correcto');
+  } else {
+      let palabraVolteada = palabra.split("").reverse().join(""); // split dividimos palabra en letras en un array, reverse da la vuelta al orden y join vuelve a unir todos los caracters en una palabra y se guarda en una variable.
+      if ( palabra === palabraVolteada) {
+        console.log ("Es palindromo");        
+      } else {
+        console.log ("No es palíndromo")
+      }
+  }   
+}
+
+esPalindromo ('rallar');
+
+// Crea la función getPrecioMostrar para que devuelva una cadena de texto con formato precio con dos decimales. Para 2 debería devolver 2.00 €. 
+// Si la función no recibe un número debería devolver devolver 'no es un formato correcto'
+
+function getPrecioMostrar (precio) {
+  if ( typeof precio != 'number') {
+    console.log ('no es un formato correcto');
+  } else {
+    console.log (`El precio es de: ${precio}.00 €`)
+  }
+}
+
+getPrecioMostrar(5);
+
+// Crea la función division que acepte como argumento dos números y devuelva el resultado de su división
+
+function division (a,b) {
+  return a / b;
+}
+console.log (division(5,2))
+
+// Crea la función esPar que acepte como argumento un número y devuelva true si es par y false si es impar
 
