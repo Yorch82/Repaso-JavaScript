@@ -491,3 +491,52 @@ console.log (esPrimo(numPrim = prompt ("Introduce un número:")));
 
 
 // Crea una función checkPasswordcon una variable tipo String que contenga una contraseña cualquiera. Después se te pedirá que introduzcas la contraseña (usando prompt), con 3 intentos. Cuando aciertes ya no pedirá más la contraseña y mostrará un mensaje diciendo “Enhorabuena”(ej.un alert). Piensa bien en la condición de salida (3 intentos y si acierta sale, aunque le queden intentos).
+
+let password = '1234';
+
+function checkPasswordcon () {
+  for ( intentos = 0; intentos < 3; intentos++){
+    pass = prompt ("Introduce contraseña:")
+    if ( password === pass){
+      alert ("Enhorabuena!");
+      break;
+    } else {
+        if (intentos <= 3) {
+          alert ("Contraseña incorrecta. Vuelve a intentarlo");
+        } else {
+            alert ("Número máximo sobrepasado");
+        }
+        
+    }
+  }
+}
+
+checkPasswordcon();
+
+// Crea una función llamada CalculadoraInversa, nos pedirá 2 operandos (int) y un signo aritmético (String), según este último se realizará la operación correspondiente. Al final mostrará el resultado en un cuadro de diálogo. Los signos aritméticos disponibles son:
+// +: suma los dos operadores.
+// -: resta los operandos.
+// *: multiplica los operandos.
+// /: divide los operandos, este debe dar un resultado con decimales (double)
+// ^: 1o operando como base y 2o como exponente.
+// %: módulo, resto de la división entre operando1 y operando2.
+
+function CalculadoraInversa (operador1, operador2, signo) {
+  if ( signo == '+'){
+    return operador1 + operador2;
+  } else if(signo == '-'){
+      return operador1 - operador2;
+  } else if (signo == '*'){
+      return operador1 * operador2;
+  } else if (signo == '/'){
+      return operador1 / operador2;
+  } else if (signo == '^'){
+    return operador1 ** operador2;
+  } else if(signo == '%'){
+    return operador1 % operador2;
+  }
+}
+
+alert (CalculadoraInversa (4,4,'+'));
+      
+
