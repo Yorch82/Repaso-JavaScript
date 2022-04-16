@@ -395,3 +395,99 @@ console.log (division(5,2))
 
 // Crea la función esPar que acepte como argumento un número y devuelva true si es par y false si es impar
 
+function esPar (checkParImpar) {
+  if ( checkParImpar %2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log (esPar(2));
+
+// Crear la función ordenarArray2 que acepta como argumento un array de números y devuelva un array ordenado de mayor a menor
+
+let ordenarArray2 = [5,9,8,1,6,2,0];
+
+ordenarArray2.sort(function(a,b){return a-b});
+
+console.log(ordenarArray2);
+
+// Crear la función obtenerImpares que acepta como argumento un array de números y devuelva un array con los elementos impares
+
+let imp = [];
+let impares = [5,9,8,1,6,2,0];
+function obtenerImpares ( impares ) {
+  for ( i = 0; i < impares.length; i++){
+    if ( impares[i] %2 != 0) {
+      imp.push(impares[i]);
+    }
+  }
+  return (imp);
+}
+
+console.log (obtenerImpares(impares));
+
+// Crear la función sumarArray que acepte como argumento un array numérico y devuelva la suma de los números en el array Array: [1, 2, 3] resultado: 6
+
+let contador = 0;
+let arrayNumeros = [3,2,1,2];
+
+function sumarArray (arrayNum) {
+  for ( i = 0; i < arrayNum.length; i++) {
+    contador = contador + arrayNum[i];
+  }
+  return contador;
+}
+
+console.log ( sumarArray(arrayNumeros));
+
+// Crear la función multiplicarArray que acepte como argumento un array numérico y devuelva la multiplicación de los números en el array Array: [2, 3, 4] resultado: 24
+
+let cont = 1;
+let arrayMultiplicar = [3,2,1,2];
+
+function multiplicarArray (arrayMultiplicar) {
+  for ( i = 0; i < arrayMultiplicar.length; i++) {
+    cont = cont * arrayMultiplicar[i];
+  }
+  return cont;
+}
+
+console.log ( multiplicarArray(arrayMultiplicar));
+
+
+// Crea una función que dada una array de números, devuelve una nueva array que tenga solo los números que son 5 o más. Ejemplo entrada [3, 6, 8, 2] salida [6, 8]
+
+let lista = [];
+let masQueCinco = [5,9,8,1,6,2,0];
+function mayorCinco ( masQueCinco ) {
+  for ( i = 0; i < masQueCinco.length; i++){
+    if ( masQueCinco[i] > 5) {
+      lista.push(masQueCinco[i]);
+    }
+  }
+  return (lista);
+}
+
+console.log (mayorCinco(masQueCinco));
+
+// Crea una aplicación que nos pida un número por prompt y con un método se lo pasamos por parámetro para que nos indique si es o no un número primo, debe devolver true si es primo sino false. 
+// Un número primo es aquel que solo puede dividirse entre 1 y sí mismo. Por ejemplo: 25 no es primo, ya que 25 es divisible entre 5, sin embargo, 17 si es primo.
+
+
+
+function esPrimo (numPrim) {
+	// Casos especiales
+	if (numPrim == 0 || numPrim == 1 || numPrim == 4) return false;
+	for (let x = 2; x < numPrim / 2; x++) {
+		if (numPrim % x == 0) return false;
+	}
+	// Si no se pudo dividir por ninguno de los de arriba, sí es primo
+	return true;
+}
+
+console.log (esPrimo(numPrim = prompt ("Introduce un número:")));
+
+
+// Crea una función checkPasswordcon una variable tipo String que contenga una contraseña cualquiera. Después se te pedirá que introduzcas la contraseña (usando prompt), con 3 intentos. Cuando aciertes ya no pedirá más la contraseña y mostrará un mensaje diciendo “Enhorabuena”(ej.un alert). Piensa bien en la condición de salida (3 intentos y si acierta sale, aunque le queden intentos).
